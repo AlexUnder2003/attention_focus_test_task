@@ -1,0 +1,22 @@
+[flake8]
+# Папки и файлы, которые нужно проверить (например, src и tests)
+# flake8 по умолчанию проверяет все файлы .py в директории и поддиректориях,
+# но можно сузить область, указав include/exclude
+include = src/*.py, tests/*.py
+
+# Исключить файлы и папки (можно паттерны)
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    migrations,
+    alembic,
+    .pytest_cache,
+    venv
+
+# Ограничение длины строки
+max-line-length = 88
+
+# Игнорировать конкретные ошибки, если нужно
+ignore = E203, W503
